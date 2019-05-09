@@ -4,6 +4,8 @@ import {
 } from 'redux';
 
 import {posts} from './reducers/posts';
+const FREQUENCY = 2000;
+const LS_KEY = 'blog-redux-exercise'
 
 // Pass an object to combineReducers
 // Object should be shaped like state.
@@ -16,6 +18,7 @@ const rootReducer = combineReducers({
 // if it's there, pass as second argument to createStore
 let initialState = JSON.parse(localStorage.getItem(LS_KEY)) || {};
 
+
 // const dataFromLocalStorage = JSON.parse(localStorage.getItem(LS_KEY));
 // if (dataFromLocalStorage){
 //     initialState = dataFromLocalStorage;
@@ -25,5 +28,10 @@ const store = createStore(
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
+
+setInterval(()=>{
+        const state=store.getState();
+        localStorage.setItem(LS_KEY,JSON.stringify(state));
+}, FREQUENCY)
 
     export default store;
