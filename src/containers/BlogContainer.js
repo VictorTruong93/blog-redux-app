@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) =>{
         }
     };
 };
-const makeBlogListSmart = connect(mapStateToProps);
+const makeBlogListSmart = connect(mapStateToProps, mapDispatchToProps);
 
 const SmartBlogList = makeBlogListSmart(BlogList);
 
