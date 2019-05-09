@@ -4,6 +4,8 @@ import {
 } from 'redux';
 
 import {posts} from './reducers/posts';
+import selectedid from './reducers/selectedid';
+
 const FREQUENCY = 2000;
 const LS_KEY = 'blog-redux-exercise'
 
@@ -11,7 +13,8 @@ const LS_KEY = 'blog-redux-exercise'
 // Object should be shaped like state.
 
 const rootReducer = combineReducers({
-    posts
+    posts,
+    selectedid
 });
 
 // check localStorage for any previously saved app state
