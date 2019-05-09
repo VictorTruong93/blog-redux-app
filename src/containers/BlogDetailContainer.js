@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import BlogDetail from '../components/BlogDetail';
 
+
+
 const mapStateToProps = (state) => {
     // We need to find the psot whose id was selected
     const id = state.selectedid;
-    const post = state.post[id];
+    const post = state.posts[id];
     return {
         post
     }
