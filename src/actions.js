@@ -17,9 +17,13 @@ export function createPost(payload){
     }
 };
 
-export function updatePost(){
+export function updatePost(id,payload){
     return {
-
+        type: ACTION_UPDATE_POST,
+        payload:{
+            id,
+            ...payload
+        }
     }
 };
 
