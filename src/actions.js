@@ -26,8 +26,11 @@ export function updatePost(){
 // comment out later
 window.createPost= createPost;
 
-export function deletePost(){
+export function deletePost(id){
     return {
-
+        type: ACTION_DELETE_POST,
+        payload: {
+            id
+        }
     }
 };
