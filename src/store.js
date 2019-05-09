@@ -37,4 +37,4 @@ setInterval(()=>{
         localStorage.setItem(LS_KEY,JSON.stringify(state));
 }, FREQUENCY)
 
-    export default store;
+export default store;
