@@ -23,6 +23,9 @@ export function updatePost(){
     }
 };
 
+// comment out later
+window.createPost= createPost;
+
 export function deletePost(){
     return {
 
